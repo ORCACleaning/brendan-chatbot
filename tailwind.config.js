@@ -7,8 +7,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        quicksand: ['Quicksand', 'sans-serif'],
+        comic: ['"Comic Neue"', 'cursive'],
       },
+    },
+  },
+  
       colors: {
         brand: {
           DEFAULT: '#0077b6',

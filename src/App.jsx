@@ -11,13 +11,17 @@ export default function App() {
   ])
 
   const startChat = () => {
-    setStarted(true)
-    setMessages(prev => [...prev, { sender: "bot", text: "What suburb is the property in?" }])
+    if (!started) {
+      setStarted(true)
+      setMessages(prev => [...prev, { sender: "bot", text: "What suburb is the property in?" }])
+    }
   }
+  
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-blue-50 px-4 font-[Quicksand]">
-      <Card className="w-full max-w-2xl shadow-xl rounded-3xl border border-blue-200 p-6">
+    <div className="w-full text-left space-y-4 text-gray-700 px-4">
+
+      <Card className="mx-auto w-full max-w-3xl shadow-2xl rounded-3xl border border-blue-100 p-8 bg-white">
         <CardContent className="flex flex-col items-center gap-6 p-6">
           {/* Brendan's avatar (placeholder) */}
           <div className="w-28 h-28 rounded-full bg-blue-300 flex items-center justify-center text-white text-3xl shadow-md">
@@ -40,11 +44,13 @@ export default function App() {
 
           {/* CTA button */}
           <Button
-            onClick={startChat}
-            className="mt-4 w-full py-4 text-lg rounded-xl bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 active:scale-95 transition-all"
-          >
-            Let’s Go
-          </Button>
+  onClick={startChat}
+  className="mt-4 w-full py-5 text-lg font-bold rounded-xl bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 active:scale-95 transition-all duration-300 shadow-md"
+>
+  Let’s Go
+</Button>
+
+          
         </CardContent>
       </Card>
     </div>
