@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card.jsx"
 import { Button } from "@/components/ui/button.jsx"
-import brendanImg from "@/assets/brendan-avatar.png" // Add your own image here
 
 export default function App() {
   const [started, setStarted] = useState(false)
@@ -20,16 +19,27 @@ export default function App() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-blue-50 px-4 font-[Quicksand]">
       <Card className="w-full max-w-2xl shadow-xl rounded-3xl border border-blue-200 p-6">
         <CardContent className="flex flex-col items-center gap-6 p-6">
-          <img src={brendanImg} alt="Brendan from Orca Cleaning" className="w-28 h-28 rounded-full shadow-md" />
+          {/* Brendan's avatar (placeholder) */}
+          <img
+            src="https://api.dicebear.com/7.x/thumbs/svg?seed=Brendan"
+            alt="Brendan from Orca Cleaning"
+            className="w-28 h-28 rounded-full shadow-md"
+          />
+
+          {/* Intro text */}
           <div className="text-center space-y-2">
             <h1 className="text-4xl font-bold text-blue-800">Hi, I’m Brendan!</h1>
             <p className="text-lg text-gray-700">Let’s get your vacate cleaning quote sorted.</p>
           </div>
+
+          {/* Message preview */}
           <div className="w-full text-left space-y-2 text-gray-600">
             {messages.map((msg, i) => (
               <p key={i} className="text-base leading-relaxed">{msg.text}</p>
             ))}
           </div>
+
+          {/* CTA button */}
           <Button
             onClick={startChat}
             className="mt-4 w-full py-4 text-lg rounded-xl bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 active:scale-95 transition-all"
