@@ -20,11 +20,10 @@ export default function App() {
       <Card className="w-full max-w-2xl shadow-xl rounded-3xl border border-blue-200 p-6">
         <CardContent className="flex flex-col items-center gap-6 p-6">
           {/* Brendan's avatar (placeholder) */}
-          <img
-            src="https://api.dicebear.com/7.x/thumbs/svg?seed=Brendan"
-            alt="Brendan from Orca Cleaning"
-            className="w-28 h-28 rounded-full shadow-md"
-          />
+          <div className="w-28 h-28 rounded-full bg-blue-300 flex items-center justify-center text-white text-3xl shadow-md">
+  🧼
+          </div>
+
 
           {/* Intro text */}
           <div className="text-center space-y-2">
