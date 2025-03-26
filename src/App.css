@@ -1,15 +1,22 @@
+/* App.css */
+
 #root {
-  max-width: 1280px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
   text-align: center;
+  background-color: #f1f9fc;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
+/* Optional logo animations (not used currently) */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms ease-in-out;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -26,17 +33,23 @@
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  .logo.spin {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Card-style containers if needed */
 .card {
-  padding: 2em;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 118, 182, 0.1);
 }
 
+/* For small gray text */
 .read-the-docs {
   color: #888;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
 }
